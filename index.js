@@ -13,12 +13,12 @@ if (playGame === "no") {
     console.log('I\'m thinking of a number between 1-100');
     // Handle the secret text (e.g. password).
     let theGuess = ''
-    do {
-        theGuess = readlineSync.question('What is your guess?');
+
+    while (theGuess != theAnswer) {
+        theGuess = readlineSync.question('What #: ');
         if (theGuess != theAnswer) {
-            console.log('\nGuess again')
+            console.log("Try Again.")
         }
-    } while (theGuess != theAnswer) {
-        console.log('you guessed it right')
     }
+    console.log("You Guessed Right!")
 }
